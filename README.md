@@ -1,5 +1,6 @@
 # protectOne-crm
 
+#перевіряйте статус репоризторія git status + git pull
 
 #1 забрати з Github репку
 git clone git@github.com:lurbaby/protectOne-crm.git
