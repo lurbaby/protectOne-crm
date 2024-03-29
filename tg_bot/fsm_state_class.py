@@ -1,8 +1,6 @@
 from aiogram.fsm.state import StatesGroup, State
 
 
-
-
 class User_stage(StatesGroup):
     # username = State
     init_start = State()
