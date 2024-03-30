@@ -1,19 +1,19 @@
-# Layer 1
-FROM ubuntu
+# Використовуйте python образ як базовий
+FROM python:3.11-slim-bullseye
 
-# Layer 2
-RUN echo "start"
-
-
-
-# Layer 3
+# Встановіть git та інші залежності, які можуть знадобитися
 RUN apt-get update && \
-    apt-get install -y python3  && \
-    apt-get install -y python3-pip
+    apt-get install -y --no-install-recommends git
 
-# Layer 4
-RUN apt-get install -y git
+RUN pip install aiogram
 
-# Layer 5
-RUN git clone https://github.com/lurbaby/schedule_bot.git
+# Клонуйте ваш репозиторій в робочу директорію
+RUN git clone https://github.com/lurbaby/protectOne-crm.git /
+
+# Перемкніться в директорію де знаходиться ваш проект
+WORKDIR /
+
+# Визначте команду для запуску вашого Python додатку
+ENTRYPOINT ["python", "main.py"]
+
 

@@ -151,6 +151,7 @@ async def get_description(message: types.Message, state: FSMContext):
 	else:
 		await message.reply("<b>Шось пішло не так, спробуйте ще раз!</b>", parse_mode=ParseMode.HTML)
 
+	await state.clear()
 
 
 # SEND DATA
