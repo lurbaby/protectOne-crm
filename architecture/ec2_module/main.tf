@@ -1,4 +1,4 @@
-resource "aws_instance" "microserv-exmpl" {
+resource "aws_instance" "protectOne" {
 	
 	ami = var.ami
 	instance_type = var.instance_type
