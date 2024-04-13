@@ -11,7 +11,7 @@ variable "security_group_id" {
 }
 
 variable "key_name" {
-	default = "kali_main_rsa_aws" 
+	default = "new_rsa" 
 }
 
 
